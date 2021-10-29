@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Dark Mode</title>
+    <style>
+        /* Light mode */
+        :root {
+            --body-bg: #eeeeee;
+            --body-color: #000000;
+            --text-color: #4bb6e7fd;
+        }
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --body-bg: #000000;
+                --body-color: #eeeeee;
+                --text-color: #c72deefd;
+            }
+        }
+        body {
+            background-color: var(--body-bg);
+            color: var(--body-color);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .text {
+            color: var(--text-color);
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>A Minimal Dark Mode</h2>
+        <p class="text">
+            This should be changed based on your device <code>"prefers-color-scheme".</code>
+        </p>
+        <p> Above Text Color
+            <span style="color: #4bb6e7fd"> in Light Mode </span>
+            &
+            <span style="color: #c72deefd"> in Dark Mode </span>
+        </p>
+    </div>
+</body>
+
+</html>
